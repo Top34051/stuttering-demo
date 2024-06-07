@@ -49,7 +49,7 @@ displaying_files = st.sidebar.multiselect(
     format_func=lambda x: file_to_name[x],
 )
 
-sample_id = st.sidebar.selectbox("Select sample", range(10))
+sample_id = st.sidebar.selectbox("Select sample", range(200))
 
 data = {file_to_name[file]: json.load(open(f"asr_outputs/{file}"))[sample_id] for file in displaying_files}
 
